@@ -18,23 +18,31 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 20) {
                 TextField("Enter your word", text: $newWord, onCommit: addNewWord)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                     .padding()
-                
+                    
                 List(usedWords, id: \.self) {
                     Image(systemName: "\($0.count).circle")
                     Text($0)
+                    }
+                    
+                Text("Your score is \(usedWords.count)")
+                    .font(.title2)
+                
+                
+                Button(action: startGame){
+                    Text("New word")
                 }
-            } //list
+            }
             .navigationBarTitle(rootWord)
             .onAppear(perform: startGame)
             .alert(isPresented: $showingError) {
                 Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
             }
-        }//navigation view
+        }
     }
     
     func addNewWord() {
@@ -56,7 +64,12 @@ struct ContentView: View {
         }
         
         guard isPossible(word: answer) else {
-            wordError(title: "Not recognized", message: "You can not make up a word! You know!")
+            wordError(title: "Not recognized", message: "You have to scramble the given word")
+            return
+        }
+        
+        guard isLong(word: answer) else {
+            wordError(title: "Too short", message: "Try something longer")
             return
         }
         
@@ -110,6 +123,14 @@ struct ContentView: View {
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
         
         return misspelledRange.location == NSNotFound
+    }
+    
+    //challenge
+    func isLong(word: String) -> Bool {
+        if word.count < 1 {
+            return false
+        }
+        return true
     }
     
     func wordError(title: String, message: String) {
