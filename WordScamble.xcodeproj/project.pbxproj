@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22A55E4A2680CEF70032E563 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22A55E492680CEF70032E563 /* start.txt */; };
 		22E64B9E26807B14000A6B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E64B9D26807B14000A6B4D /* AppDelegate.swift */; };
 		22E64BA026807B14000A6B4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E64B9F26807B14000A6B4D /* SceneDelegate.swift */; };
 		22E64BA226807B14000A6B4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E64BA126807B14000A6B4D /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22A55E492680CEF70032E563 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		22E64B9A26807B14000A6B4D /* WordScamble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordScamble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E64B9D26807B14000A6B4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22E64B9F26807B14000A6B4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				22E64BA326807B15000A6B4D /* Assets.xcassets */,
 				22E64BA826807B15000A6B4D /* LaunchScreen.storyboard */,
 				22E64BAB26807B15000A6B4D /* Info.plist */,
+				22A55E492680CEF70032E563 /* start.txt */,
 				22E64BA526807B15000A6B4D /* Preview Content */,
 			);
 			path = WordScamble;
@@ -133,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22E64BAA26807B15000A6B4D /* LaunchScreen.storyboard in Resources */,
+				22A55E4A2680CEF70032E563 /* start.txt in Resources */,
 				22E64BA726807B15000A6B4D /* Preview Assets.xcassets in Resources */,
 				22E64BA426807B15000A6B4D /* Assets.xcassets in Resources */,
 			);
